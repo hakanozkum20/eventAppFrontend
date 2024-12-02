@@ -126,8 +126,8 @@ export default function Calendar() {
         dayMaxEvents={true}
         headerToolbar={{
           left: "title",
-          center: "dayGridDay,dayGridWeek,dayGridMonth",
           right: "prevYear,prev,next,nextYear today",
+          center: "dayGridDay,dayGridWeek,dayGridMonth",
         }}
         buttonText={{
           prevYear: `${currentYear - 1}`,
