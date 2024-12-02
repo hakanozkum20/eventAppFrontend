@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+@layer base {
+  body {
+    @apply relative z-1 bg-gray-2 font-satoshi text-base font-normal text-dark-5 dark:bg-[#020D1A] dark:text-dark-6;
+  }
+}
+
+.fc-daygrid-day-top {
+  justify-content: center;
+}
+.fc-daygrid-day-number {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: background-color 0.45s ease;
+}
+
+.fc-daygrid-day-frame:hover .fc-daygrid-day-number {
+  background-color: #dddddd; /* Hover olduğunda arka plan rengini kırmızı yap */
+}
+
+.fc-col-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #023e8a;
+  color: white;
+}
+
+.fc th {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none !important;
+  border-collapse: collapse;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.fc-scrollgrid-sync-inner {
+  border: none !important;
+}
+
+.fc-scrollgrid {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.fc-button {
+  background-color: #0096c7 !important;
+}
+.fc-button:hover {
+  background-color: #0077b6 !important ;
+}
+.fc-button-active {
+  background-color: #023e8a !important;
+}

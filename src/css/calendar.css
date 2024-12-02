@@ -1,0 +1,130 @@
+/* Diğer ayların günlerini hafif soluk göster */
+.fc .fc-day-other {
+  opacity: 0.8 !important;
+}
+
+/* Dark mode için diğer ayların günleri */
+[data-theme="dark"] .fc .fc-day-other {
+  opacity: 0.8 !important;
+}
+
+/* Diğer ayların günlerinin numaralarını hafif soluk göster */
+.fc .fc-day-other .fc-daygrid-day-top {
+  opacity: 0.7 !important;
+}
+
+/* Başlık stilleri */
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Button stilleri */
+.fc .fc-button {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+/* Responsive header düzenlemeleri */
+@media (max-width: 1024px) {
+  .fc .fc-toolbar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .fc .fc-toolbar-title {
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  .fc .fc-toolbar-chunk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fc .fc-toolbar-chunk:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .fc .fc-today-button {
+    grid-column: span 2;
+    margin: 0 !important;
+  }
+
+  .fc .fc-button-group {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
+
+/* Tablet için düzenlemeler */
+@media (max-width: 768px) {
+  .fc .fc-toolbar-chunk:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.25rem;
+  }
+
+  .fc .fc-button {
+    padding: 4px 8px;
+    font-size: 0.875rem;
+  }
+
+  /* View butonlarını düzenle */
+  .fc .fc-toolbar-chunk:nth-child(2) .fc-button-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Mobil için düzenlemeler */
+@media (max-width: 480px) {
+  .fc .fc-toolbar-chunk:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.125rem;
+  }
+
+  .fc .fc-button {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .fc .fc-toolbar-chunk:nth-child(2) .fc-button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+  }
+
+  /* Today butonunu küçült */
+  .fc .fc-today-button {
+    padding: 4px 8px !important;
+    font-size: 0.75rem !important;
+  }
+}
