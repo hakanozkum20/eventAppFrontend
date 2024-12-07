@@ -1,67 +1,91 @@
-/* Diğer ayların günlerini hafif soluk göster */
+/* Temel takvim stilleri */
 .fc .fc-day-other {
   opacity: 0.8 !important;
 }
 
-/* Dark mode için diğer ayların günleri */
-[data-theme="dark"] .fc .fc-day-other {
-  opacity: 0.8 !important;
-}
-
-/* Diğer ayların günlerinin numaralarını hafif soluk göster */
 .fc .fc-day-other .fc-daygrid-day-top {
   opacity: 0.7 !important;
 }
 
-/* Başlık stilleri */
+/* Toolbar stilleri */
+.fc .fc-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  padding: 1rem !important;
+  gap: 1rem !important;
+}
+
 .fc .fc-toolbar-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
 }
 
-/* Button stilleri */
 .fc .fc-button {
-  padding: 6px 12px;
-  font-size: 0.875rem;
+  padding: 6px 12px !important;
+  font-size: 0.875rem !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-/* Responsive header düzenlemeleri */
+/* Event stilleri */
+.fc-event {
+  min-height: 40px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.fc-event:hover {
+  opacity: 0.9 !important;
+  transform: scale(1.01) !important;
+}
+
+.fc-event-title {
+  white-space: pre-line !important;
+  line-height: 1.1 !important;
+  padding: 1px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* Event içerik stilleri */
+.fc-daygrid-event-harness {
+  margin-bottom: 1px !important;
+}
+
+.fc-daygrid-day-events {
+  padding: 1px !important;
+}
+
+.fc-event .event-title-name {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0px !important;
+}
+
+.fc-event .event-title-time {
+  font-size: 0.65rem !important;
+}
+
+/* Responsive düzenlemeler */
 @media (max-width: 1024px) {
   .fc .fc-toolbar {
     display: grid;
-    justify-content: center;
-    align-items: center;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
-  }
-
-  .fc .fc-toolbar-title {
     text-align: center;
-    margin: 0 !important;
   }
 
   .fc .fc-toolbar-chunk {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 0.5rem;
-  }
-
-  .fc .fc-toolbar-chunk:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .fc .fc-today-button {
-    grid-column: span 2;
-    margin: 0 !important;
   }
 
   .fc .fc-button-group {
@@ -70,61 +94,47 @@
   }
 }
 
-/* Tablet için düzenlemeler */
 @media (max-width: 768px) {
-  .fc .fc-toolbar-chunk:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 300px;
-  }
-
   .fc .fc-toolbar-title {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 
   .fc .fc-button {
-    padding: 4px 8px;
-    font-size: 0.875rem;
-  }
-
-  /* View butonlarını düzenle */
-  .fc .fc-toolbar-chunk:nth-child(2) .fc-button-group {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    max-width: 300px;
+    padding: 4px 8px !important;
+    font-size: 0.875rem !important;
   }
 }
 
-/* Mobil için düzenlemeler */
 @media (max-width: 480px) {
-  .fc .fc-toolbar-chunk:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 250px;
-  }
-
   .fc .fc-toolbar-title {
-    font-size: 1.125rem;
+    font-size: 1.125rem !important;
   }
 
   .fc .fc-button {
-    padding: 4px 6px;
-    font-size: 0.75rem;
+    padding: 4px 6px !important;
+    font-size: 0.75rem !important;
   }
 
-  .fc .fc-toolbar-chunk:nth-child(2) .fc-button-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 250px;
-  }
-
-  /* Today butonunu küçült */
   .fc .fc-today-button {
     padding: 4px 8px !important;
     font-size: 0.75rem !important;
   }
+}
+
+.fc .fc-addEventButton-button {
+  border-radius: 9999px !important;
+  background-color: rgb(var(--color-primary)) !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+
+.fc .fc-addEventButton-button:hover {
+  background-color: rgb(var(--color-primary-hover)) !important;
 }

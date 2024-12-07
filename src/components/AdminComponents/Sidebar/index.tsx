@@ -111,8 +111,8 @@ const menuGroups = [
             />
           </svg>
         ),
-        label: "Profile",
-        route: "/profile",
+        label: "Customer",
+        route: "/customers",
       },
       {
         icon: (
